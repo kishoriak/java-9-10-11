@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"mylibrarymodule","c":"MyClass","l":"add()"},{"p":"mylibrarymodule","c":"MyClass","l":"MyClass(int, int)"},{"p":"mylibrarymodule","c":"MyClass","l":"sub()"}]

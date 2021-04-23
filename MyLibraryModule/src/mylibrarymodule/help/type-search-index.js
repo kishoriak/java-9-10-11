@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"mylibrarymodule","l":"MyClass"}]

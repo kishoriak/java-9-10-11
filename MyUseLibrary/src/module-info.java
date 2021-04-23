@@ -1,0 +1,3 @@
+module MyUseLibrary {
+	requires MyLibraryModule;
+}

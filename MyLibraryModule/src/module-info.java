@@ -1,0 +1,3 @@
+module MyLibraryModule {
+	exports mylibrarymodule;
+}
