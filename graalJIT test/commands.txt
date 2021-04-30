@@ -1,0 +1,11 @@
+"C:\Program Files\Java\jdk-10.0.2\bin\javac" CountUppercase.java
+//using graal use +ve symbol
+"C:\Program Files\Java\jdk-10.0.2\bin\java" -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:+UseJVMCICompiler  CountUppercase Test the String
+
+//without using graal use -ve symbol
+"C:\Program Files\Java\jdk-10.0.2\bin\java" -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:-UseJVMCICompiler  CountUppercase Test the String
+
+
+javac CountUppercaseAlpha.java
+java -Diterations=2 CountUppercaseAlpha In 2017 I would like to run ALL languages in one VM.
+// RUN-CMD: java -Diterations=2 -XX:-UseJVMCICompiler CountUppercaseAlpha In 2017 I would like to run ALL languages in one VM i.e GraalVM.

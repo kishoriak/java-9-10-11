@@ -1,0 +1,1 @@
+java -Xshare:off -Xlog:class+path=info -Xlog:class+load:file=test.log -XX:+UnlockDiagnosticVMOptions -XX:SharedArchiveFile=hello.jsa  -Xmx32g -Xms16g -XX:+UnlockExperimentalVMOptions -XX:AllocateHeapAt=.\Heap -jar SprongBootHelloMVCApp-0.0.1-SNAPSHOT.jar

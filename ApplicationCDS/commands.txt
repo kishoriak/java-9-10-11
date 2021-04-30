@@ -1,0 +1,26 @@
+To run jar file
+
+java -jar jarfilname
+
+To create archive file for system classes
+
+java -Xshare:dump
+
+Store classes.jsa file C:\Program Files\Java\jdk-10.0.2\bin\server
+
+
+#The path for myjar- D:\IET-JAVA-II\SprongBootHelloMVCApp\target
+
+For listing classes
+
+java -Xshare:off -XX:+UnlockCommercialFeatures -XX:+UseAppCDS -Xlog:class+path=info -XX:DumpLoadedClassList=hello.lst -jar Myhello.jar 
+
+For creating application archive file
+
+java -Xshare:dump -XX:+UnlockCommercialFeatures -XX:+UseAppCDS -Xlog:class+path:file=MyLog2.log -XX:SharedClassListFile=hello.lst -XX:SharedArchiveFile=hello.jsa -cp .Myhello.jar
+
+java -Xshare:on -Xlog:class+path=info -Xlog:class+load:file=test.log -XX:+UnlockCommercialFeatures -XX:+UseAppCDS -XX:SharedArchiveFile=hello.jsa -cp .Myhello.jar -jar Myhello.jar
+
+java -Xshare:on -Xlog:class+path=info -Xlog:class+load:file=Mylog.log -XX:+UnlockDiagnosticVMOptions -XX:SharedArchiveFile=hello.jsa  -jar SprongBootHelloMVCApp-0.0.1-SNAPSHOT.jar
+
+java -Xshare:on -Xlog:class+path=info -Xlog:class+load:file=newfile1.log -XX:+UnlockDiagnosticVMOptions -XX:SharedArchiveFile=hello.jsa  -jar SprongBootHelloMVCApp-0.0.1-SNAPSHOT.jar
