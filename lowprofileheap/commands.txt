@@ -1,0 +1,27 @@
+find / -type f -name "jvmti.h"
+
+gcc -Wl, -g -fno-strict-aliasing -fPIC -fno-omit-frame-pointer -W -Wall  -Wno-unused -Wno-parentheses -I 'C:\Program Files\Java\jdk-11.0.10\include' -I 'C:\Program Files\Java\jdk-11.0.10\include/usr/lib/win32' -c -o sample.o sample.c
+
+gcc -shared -o libsample_agent.so sample.o
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+       System.out.println("Hello world!");
+
+    }
+
+}
+
+
+compile this program by executing the following command:
+
+javac HelloWorld.java
+
+
+LD_LIBRARY_PATH=`pwd` java -agentlib:sample HelloWorld
+Here, the LD_LIBRARY_PATH tells java the path to find the shared libraries it may require. The -agentlib parameter is used to tell the name of the shared library that needs to be executed
+
+
+#this interface will help to find which methods are getting executed.

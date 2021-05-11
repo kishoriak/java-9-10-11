@@ -1,0 +1,11 @@
+
+
+to see bridge method Before java 11
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk1.8.0_271\bin\javac.exe" Outer.java
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk1.8.0_271\bin\javap" -c  Outer
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk1.8.0_271\bin\javap" -c  Outer$Inner
+
+---to see nesthost and nestmembers
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk-11.0.10\bin\javac.exe" MultipleNestTest.java
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk-11.0.10\bin\javap" -v  MultipleNestTest
+D:\java 9_10_11\nestbasedclasses>"C:\Program Files\Java\jdk-11.0.10\bin\javap" -v  MultipleNestTest$NestedClass2.class
